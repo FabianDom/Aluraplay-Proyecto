@@ -1,7 +1,63 @@
+/* Cabecera */
 .cabecera__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+.cabecera__buscar__item {
+  display: none;
+}
+/* Superior */
+.superior__seccion__container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Mantiene el contenido en una sola línea sin saltos automáticos */
+  overflow: scroll; /* Muestra barras de desplazamiento en caso de desbordamiento */
+  gap: 15px;
+}
+
+/* Menu */
+.menu__container{
+position: fixed;
+bottom: 0;
+height: 75px ;
+width: 100%;
+}
+
+/* footer */
+.rodapie__container {
+  display: flex;
+  /* flex-direction: column;
+   flex-wrap: wrap; Salto a nueva columna si no caben */
+  flex-flow: column wrap; /* direcion en columna y Salto a nueva columna si no caben */
+}
+.menu__lista{
    display: flex;
-   justify-content: space-between;
-   align-items: center;
-   position: fixed;
-   top: 0;
+   justify-content: space-around;
+   height: 100%;
+
+}
+.menu__lista li {
+   align-self: center; /* Centra el ELEMENTO en el contenedor flex */
+
+}
+/* Ocultar listas menu para dispositivos moviles  */
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+   display: none;
+}
+
+/* Dispositivos moviles */
+@media (min-width: 834px) {
+  /* Cabecera */
+  .cabecera__buscar__item {
+    display: block;
+  }
+  /* footer */
+  .rodapie__container {
+    justify-content: space-between;
+  }
 }
