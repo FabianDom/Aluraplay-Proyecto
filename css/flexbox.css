@@ -33,6 +33,8 @@ width: 100%;
    flex-wrap: wrap; Salto a nueva columna si no caben */
   flex-flow: column wrap; /* direcion en columna y Salto a nueva columna si no caben */
 }
+
+/* Menu */
 .menu__lista{
    display: flex;
    justify-content: space-around;
@@ -42,6 +44,11 @@ width: 100%;
 .menu__lista li {
    align-self: center; /* Centra el ELEMENTO en el contenedor flex */
 
+}
+.menu__itens{
+display: flex;
+flex-direction: column;
+gap: 5px;
 }
 /* Ocultar listas menu para dispositivos moviles  */
 .menu__lista:nth-child(2),
