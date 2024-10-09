@@ -18,8 +18,6 @@
   gap: 15px;
 }
 
-
-
 /* footer */
 .rodapie__container {
   display: flex;
@@ -28,34 +26,66 @@
   flex-flow: column wrap; /* direcion en columna y Salto a nueva columna si no caben */
 }
 /* Menu */
-.menu__container{
-   position: fixed;
-   bottom: 0;
-   height: 75px ;
-   width: 100%;
-   }
+.menu__container {
+  position: fixed;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+}
 /* Menu */
-.menu__lista{
-   display: flex;
-   justify-content: space-around;
-   height: 100%;
-
+.menu__lista {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
 }
 .menu__lista li {
-   align-self: center; /* Centra el ELEMENTO en el contenedor flex */
-
+  align-self: center; /* Centra el ELEMENTO en el contenedor flex */
 }
-.menu__itens{
-display: flex;
-flex-direction: column;
-gap: 5px;
+.menu__itens {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 /* Ocultar listas menu para dispositivos moviles  */
 .menu__lista:nth-child(2),
 .menu__lista:nth-child(3),
 .menu__lista:nth-child(4) {
-   display: none;
+  display: none;
 }
+.videos__container{
+   display: flex;
+   justify-content: flex-start !important;
+   flex-wrap: wrap;
+   gap: 10px;
+   width: 100%;
+  }
+  
+  .videos__item{
+   width: 303px;
+   height: 285px;
+  flex-grow: 1;
+  }
+
+  
+  .descripcion-video {
+   margin-top: 10px;
+   display: flex;
+   align-items: flex-start;
+
+   gap: 10px;
+  }
+  .detalles__video {
+  flex-direction: column;
+ }
+
+  .descripcion-video h3 {
+   text-align: start;
+  }
+  .descripcion-video p {
+   margin-top: 15px;
+   text-align: center;
+  }
+
 
 /* Dispositivos moviles */
 @media (min-width: 834px) {
@@ -67,25 +97,118 @@ gap: 5px;
   .rodapie__container {
     justify-content: space-between;
   }
-}
-/* Dispositivos tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-   .menu__container{
-      position: fixed;
-      margin-top: 0;
-      height: calc(100% - 80px); /* Ajusta la altura según la cabecera */
-      width: 74px;
-      z-index: 1;
+  .menu__container {
+    position: fixed;
+    margin-top: 0;
+    height: calc(100% - 80px); /* Ajusta la altura según la cabecera */
+    width: 74px;
+    z-index: 1;
+  }
+  .menu__lista {
+    flex-direction: column;
+    height: 100%;
+    margin-top: 30px;
+    justify-content: flex-start; /* Alinear los ítems al principio */
+    gap: 30px;
+  }
+  .videos__container{
+   display: flex;
+   justify-content: flex-start !important;
+   flex-wrap: wrap;
+   gap: 10px;
+   width: 100%;
+  }
+  
+  .videos__item{
+   width: 303px;
+   height: 285px;
+   margin: auto;
+  }
 
+  
+  .descripcion-video {
+   margin-top: 10px;
+   display: flex;
+   align-items: flex-start;
+
+   gap: 10px;
+  }
+  .detalles__video {
+  flex-direction: column;
  }
- .menu__lista{
-   flex-direction: column;
-   height: 100%;
-  justify-content: flex-start; /* Alinear los ítems al principio */
-  gap: 30px;
 
-
+  .descripcion-video h3 {
+   text-align: start;
+  }
+  .descripcion-video p {
+   margin-top: 15px;
+   text-align: center;
+  }
 }
 
- 
+ /*desktop */
+@media (min-width: 1440px) {
+  .menu__container {
+    width: 239px;
+    overflow: scroll;
+  }
+  .menu__container::-webkit-scrollbar {
+   display: none; /* Oculta la barra de scroll en navegadores WebKit */
+ }
+  .menu__lista:nth-child(2),
+  .menu__lista:nth-child(3),
+  .menu__lista:nth-child(4) {
+    display: flex;
+  }
+  .menu__lista {
+    height: auto;
+    margin-top: 0px;
+    padding: 20px 17px 20px 15px;
+    gap: 15px;
+  }
+
+  .menu__lista:nth-child(3) {
+   flex-direction: column-reverse;
+   
+ }
+ .menu__lista:nth-child(4) {
+   flex-direction: column-reverse;
+   
+ }
+  .menu__itens {
+   flex-direction: row;
+   gap: 15px;
+   align-items: center;
+  }
+  .videos__container{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   width: 100%;
+  }
+  .videos__item{
+   width: 303px;
+   height: 285px;
+   margin: auto;
+   
+  }
+  .descripcion-video {
+   margin-top: 10px;
+   display: flex;
+   align-items: flex-start;
+
+   gap: 10px;
+  }
+  .detalles__video {
+  flex-direction: column;
+ }
+
+  .descripcion-video h3 {
+   text-align: start;
+  }
+  .descripcion-video p {
+   margin-top: 15px;
+   text-align: center;
+  }
+
 }
